@@ -21,4 +21,4 @@ app.get('/api/fetchProduct', async (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log('Server running')); */
+app.listen(3000, () => console.log('Server running'));
