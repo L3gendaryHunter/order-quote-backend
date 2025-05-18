@@ -8,7 +8,7 @@ app.get('/api/fetchProduct', async (req, res) => {
   // Example using Rainforest API (replace with your own key and service)
   const response = await axios.get('https://api.rainforestapi.com/request', {
     params: {
-      api_key: 'your_rainforest_api_key',
+      api_key: '9f46f8ec4c43186d89f6d567264a54c0',
       type: 'product',
       url: url
     }
