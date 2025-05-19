@@ -19,9 +19,11 @@ app.get('/api/fetchProduct', async (req, res) => {
       name: product.title,
       price_usd: product.buybox_winner?.price?.value || product.price?.value
     });
-
   } catch (err) {
     console.error('Error fetching product:', err.message);
     res.status(500).json({ error: 'Failed to fetch product data' });
   }
 });
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
