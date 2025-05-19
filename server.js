@@ -18,9 +18,11 @@ app.get('/api/fetchProduct', async (req, res) => {
 
     const product = response.data.product;
     res.json({
-      name: product.title,
-      price_usd: product.buybox_winner?.price?.value || product.price?.value
-    });
+    name: product.title,
+    price: product.buybox_winner?.price?.value || product.price?.value,
+    currency: product.buybox_winner?.price?.currency || "USD",
+    image: product.main_image?.link
+  });
   } catch (err) {
     console.error('Error fetching product:', err.message);
     res.status(500).json({ error: 'Failed to fetch product data' });
