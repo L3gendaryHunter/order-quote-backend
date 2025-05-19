@@ -10,7 +10,9 @@ app.get('/api/fetchProduct', async (req, res) => {
       params: {
         api_key: '241D2120627B439DA9A5C63A7A96F506',
         type: 'product',
-        url: url
+        url: url,
+        language: 'en_GB',
+        currency: 'GBP'
       }
     });
 
